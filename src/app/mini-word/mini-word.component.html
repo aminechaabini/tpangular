@@ -1,0 +1,30 @@
+<div class="container mt-3">
+  <form>
+    <div>
+      <p [ngStyle] = "{
+      'color' : color,
+      'font-size' : size,
+      'font' : font
+      }">
+
+      </p>
+    </div>
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="colorInput">Champ Texte</label>
+        <input type="text" class="form-control" placeholder="Color" id="colorInput" #input (change)="changeColor(input)">
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="numberInput">Champ Nombre</label>
+        <input type="number" class="form-control" id="numberInput" placeholder="Taille" #input (change)="changeSize(input)>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="fontSelect">Font</label>
+        <select class="form-control" id="fontSelect">
+          <option value="arial">arial </option>
+          <option value="calibri">calibri/option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
